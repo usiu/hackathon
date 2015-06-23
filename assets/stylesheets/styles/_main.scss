@@ -1,0 +1,207 @@
+.wrapper {
+	width: 90%;
+	margin: auto 5%;
+}
+
+.main {
+	
+	margin-top: 3em;
+	
+	img {
+		width: 100%;
+	}
+	
+		
+	h1 {
+		font-size: 5em;
+		font-weight: 100;
+		color: $summer_dark_green;
+		letter-spacing: -2px;
+		margin: 0;	
+	}
+
+	
+	//Main home styles
+	&.home {
+		
+		h1, h2, h3 {
+			margin: 0;
+		}
+		
+		h1 {
+			font-size: 3em;
+			font-weight: bold;
+			line-height: 1;
+		}
+
+		h2 {
+			font-size: 1em;
+			font-weight: 100;
+			color: $summer_dark_green;
+			color: #AAA;
+			text-transform: uppercase;
+		}
+
+		
+		h2 {
+			margin-top: 0.25em;
+		}
+		
+		h3 {
+			margin-top: 0.125em;
+			font-weight: 100;
+			color: $summer_dark_green;
+		}
+		
+		.see-last-sem {
+			
+			@extend .lf;
+			@extend .cell;
+			@extend .bg-solid;
+			@extend .dark-green;
+			
+			.button {
+				margin-top: 2.75em;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			
+		}
+		
+	}
+	//End of Home Styles
+	
+	//Page Styles
+	&.page {
+		
+		.row {
+			clear: both;
+		}
+		
+		p {
+			font-size: 1.35em;
+			font-weight: 100;
+			line-height: 1.5;
+		}
+
+		.title-wrapper {
+			margin-bottom: 3em;
+			padding: 1.5em 0 1em;
+			border-bottom: 1px solid rgba($summer_green, 0.5);
+
+			p {
+				font-size: 1.5em;
+				line-height: 1.2;
+				color: #AAA;
+				margin-top: 0.125em;
+			}
+		}
+		
+		h3 {
+			color: $summer_dark_green;
+			font-size: 1.25em;
+			font-weight: 100;
+		}
+		
+		.gallery-images {
+			
+			padding: 0.5em 0 2em;
+			
+			li {
+				@extend .lf;
+				padding: 0.5em 0;				
+			}
+		}
+		
+		//Sponsor Gallery Styles 
+		.sponsor-gallery {
+			
+			ul, li {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {				
+				@extend .col-2-3;
+				@extend .clearfix;
+				display: block;
+			}
+			
+			li {
+				margin: 1em 3em 1em 0;
+        
+				a {
+					text-decoration: none;
+					display: table;
+				}
+				img {
+					vertical-align: top;
+					width: auto;
+          height: 3em;
+				}
+			}
+			
+		}		
+		//End of Sponsor Gallery Styles 
+		
+    //Guide Styles
+    .guide, .terms, .privacy {
+      max-width: 640px;
+      
+      h4 {
+        font-size: 1.75em;
+        font-weight: 400;
+        color: $summer_dark_green;
+        text-transform: uppercase;
+        margin-top: 2.75em;
+        margin-bottom: 0.75em;
+      }
+
+      h5 {
+        font-size: 1.35em;
+        font-weight: 400;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        margin-top: 2.5em;
+        margin-bottom: 0.75em;
+      }
+      
+      a {
+        text-decoration: none;
+        color: $summer_dark_green;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+
+        &:hover {
+          border-bottom-color: $usiu_yellow;
+        }
+      }
+      
+      p {
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+
+      ul {
+
+        li {
+          display: list-item;
+
+          font-size: 0.9em;
+          line-height: 1.8;
+          list-style: disc;
+
+          margin-top: 0;
+          margin-left: 2em;
+          margin-bottom: 0.25em;
+
+          padding-left: 0.25em;
+          padding-bottom: 0;
+
+        }
+      }
+      
+    }
+    //End of Guide Styles
+	}
+	
+}

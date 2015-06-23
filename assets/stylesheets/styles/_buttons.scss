@@ -1,0 +1,100 @@
+/* Button Styles */
+
+.button {
+	color: #FFF;
+	text-decoration: none;
+	display: table;
+
+	padding: 0.5em 1em;
+	border: 2px solid transparent;
+	border-radius: 1.5em;
+	
+	margin: 1em 0;
+		
+	@include transition(background ease-in 0.15s);
+	
+	&.dark-green {
+		border-color: $summer_dark_green;
+		background-color: $summer_dark_green;
+	}
+
+	&.green {
+		border-color: $summer_green;
+		background-color: $summer_green;
+	}
+	
+	&.yellow {
+		border-color: $usiu_yellow;
+		background-color: $usiu_yellow;
+	}
+
+	&.black {
+		border-color: #000;
+		background-color: #000;
+	}
+	
+	//Square button
+	&.square {
+		min-width: 175px;
+		font-weight: 100;
+		font-variant: small-caps;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 3px;
+		padding: 1.25em 0;
+		border-radius: 0;
+		font-size: 0.9em;
+		margin-top: 1.75em;
+		
+		@include transition(opacity 0.3s ease);
+		
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+	
+	//Hollow  button styles
+	&.hollow {
+		color: #CCC;
+		border-color: #CCC;
+		background: transparent;
+		
+		&:hover {
+			color: #FFF !important;
+		}
+		
+		&.white {
+			color: #FFF;
+			border-color: #FFF;
+			
+			&:hover {
+				border-color: $usiu_yellow;
+				background-color: $usiu_yellow;
+			}
+		}
+		
+		&.dark-green {
+			color: $summer_dark_green;
+			border-color: $summer_dark_green;
+			
+			&:hover {
+				border-color: $summer_dark_green;
+				background-color: $summer_dark_green;
+			}
+		}
+		
+		&.green {
+			color: $summer_green;
+			border-color: $summer_green;
+
+			&:hover {
+				border-color: $summer_green;
+				background-color: $summer_green;
+			}
+			
+		}
+		
+	}
+}
+
+/* End of Button Styles */

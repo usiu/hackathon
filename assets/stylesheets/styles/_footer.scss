@@ -1,0 +1,78 @@
+/** Application Footer Styles **/
+
+footer {
+	
+	background: #FFF;
+	position: relative;
+	z-index: 1;
+
+	font-family: $primary_font_stack;
+	font-size: 0.85em;
+	color: darken(#CCC, 20%);
+	letter-spacing: 1px;
+	
+	margin: 9em 0 0;
+//	padding-top: 2em; padding-bottom: 1em;
+	padding: 1em 2.5%;
+	
+	border-bottom: 1px solid #EEE;
+	
+	h3 {
+		font-size: 0.85em;
+		font-weight: normal;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+	}
+
+	p {
+		letter-spacing: 0;
+	}
+
+	.privacy-terms-links {
+		a {
+			display: inline-block;
+			color: #AAA;
+			font-size: 0.85em;
+			margin-right: 1em;
+		}
+	}
+
+	img {
+		width: inherit;
+		width: 150px;
+	}
+
+	a {
+		display: table;
+		color: $usiu_blue;
+		text-decoration: none;
+		margin-bottom: 0.25em;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom-color: $usiu_yellow;
+		}
+	}
+
+	.credits {
+		padding-bottom: 1em;
+
+		color: #B0B0B0;
+
+		h3 {
+			margin-bottom: 0;
+			text-transform: none;
+		}
+
+		a {
+			display: inline-block;
+			color: #AAA;
+			font-size: 0.85em;
+			margin-right: 0.5em;
+		}
+	}
+	
+}
+
+
+/** End of Footer Styles **/

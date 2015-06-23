@@ -1,0 +1,28 @@
+/** Common Site Styles **/
+
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+
+.bg-solid {
+	
+	&.dark-green {
+		background: $summer_dark_green;	
+	}
+	&.green {
+		background: $summer_green;
+	}
+	&.black {
+		background: #000;
+	}
+}
+
+/** End of Common Site Styles **/

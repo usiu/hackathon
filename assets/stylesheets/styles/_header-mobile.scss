@@ -1,0 +1,101 @@
+/** Header Styles **/
+
+header {
+	@extend .wrapper;
+	@extend .clearfix;
+
+	a.menu-icon {
+		
+		display: block;
+		position: absolute;
+		right: 5%;
+		top: 1.125em;
+		z-index: 1000;
+		
+		@include transition(all 0.6s ease);
+		
+		&:hover {
+			.patty {
+				&:before {
+					top: -9px;
+				}		
+				&:after {
+					top: 9px;
+				}
+
+			}			
+		}		
+		
+	}
+	
+	.patty {
+		width: 24px;
+		height: 4px;
+		margin: 10px 0;
+		background: $summer_dark_green;
+		cursor: pointer;
+		position: relative;
+		
+		&:before, &:after {
+			cursor: pointer;
+			position: absolute;
+			content: '';
+			display: block;
+			width: 24px;
+			height: 4px;
+			background: $summer_dark_green;
+			z-index: -1;
+			@include transition(all 0.4s ease);
+		}
+		
+		&:before {
+			top: -8px;
+		}
+		&:after {
+			top: 8px;
+		}
+							
+	}
+	
+	nav {
+		@extend .clearfix;
+		padding: 1em 0;
+		
+		//Link styles
+		.links {
+			position: absolute;
+			top: 4em;
+			width: 100%;
+			
+			background: #FFF;
+			float: none;
+			
+			padding: 0.5em 0 1em;
+			
+			a {
+				display: block;
+				text-decoration: none;
+				color: $summer_green;
+				font-size: 1.25em;
+				font-weight: 300;
+				letter-spacing: 1px;
+				
+				padding: 0.75em 0;
+				
+				&.active {
+					color: $summer_dark_green;
+					font-weight: bold;
+				}
+			}
+			
+		}
+		
+		.logo-wrapper {
+			img {
+				height: 32px;
+			}
+		}
+	}
+}
+
+/** End of Header Styles **/

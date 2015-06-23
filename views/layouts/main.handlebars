@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/images/touch/apple-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" sizes="196x196" href="/images/touch/touch-icon-192x192.png">
+        <link rel="shortcut icon" href="/images/touch/apple-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="/images/touch/apple-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#FFCB08">
+
+        <link rel="stylesheet" href="/assets/stylesheets/normalize.css">
+        <link rel="stylesheet" href="{{{STYLES_URL}}}">
+        <script src="/assets/javascripts/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+
+        {{{body}}}
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-59739884-1');ga('send','pageview');
+        </script>
+		-->
+    </body>
+	<script src="{{{SHARED_SCRIPT_URL}}}"></script>
+	<script src="{{{APP_SCRIPT_URL}}}"></script>
+</html>
