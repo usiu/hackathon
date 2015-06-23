@@ -1,0 +1,68 @@
+
+/** Modal Styles **/
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	background: #FFF;
+	overflow: hidden;
+	
+	cursor: zoom-out;
+	
+	.modal {
+		height: 100%;
+		width: 100%;
+		
+		img {
+			display: block;
+			height: 80%;
+			margin: 5% auto;
+		}
+		
+		.arrow {
+			
+			position: absolute;
+			top: 44%;
+			padding: 0.2em 0.625em;
+			font-size: 2em;
+			color: #AAA;
+			text-decoration: none;
+			@include transition(0.2s ease-in-out all);
+
+			&:hover {
+				color: $summer_green;
+			}
+			
+			&:active {
+				margin-top: 1px;
+			}
+			
+			
+			&.left {
+				left: 1em;
+				
+				&::before {
+					content: '\2039';
+				}
+			}
+			&.right {
+				
+				right: 1em;
+				
+				&::before {
+					content: '\203a';
+				}
+			}
+			
+		}
+	}
+	
+	
+}
+
+
+/** End of Modal Styles **/

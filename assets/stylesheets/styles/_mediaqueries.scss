@@ -88,17 +88,25 @@
 			}
 			
 			.main-image {
+        float: left;
+        width: 55%;
 				padding: 0.5em 0.5em 0;
+        cursor: zoom-in;
 			}
 			
 			.gallery-images {
-				
-				padding: 2em 0;
+        float: left;
+				width: 45%;
+				padding: 0 0 0 1em;
 				
 				li {
-					width: 25%;
+					width: 50%;
 					padding: 0.5em;
 				}
+        
+        img {
+          cursor: zoom-in;
+        }
 			}
 			
 			//Sponsor Gallery Styles

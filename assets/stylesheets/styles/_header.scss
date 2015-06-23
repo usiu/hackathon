@@ -1,4 +1,70 @@
 /** Header Styles **/
+body {
+  .register {
+    @extend .clearfix;
+    height: 0;
+    z-index: -1;
+    visibility: hidden;
+		@include transition(all 0.5s 0.2s);
+    
+    .sponsors {
+      opacity: 0;
+    }
+    
+  }
+  
+  
+}
+
+body.show-register {
+  .register {
+    position: relative;
+    height: auto;
+    z-index: 2;
+    min-height: 550px;
+    visibility: visible;
+		@include transition(all 0.5s 0.2s);
+    
+    .sponsors {
+      position: absolute;
+      bottom: 2.5em;
+      opacity: 1;
+
+      @extend .wrapper;
+      @include transition(all 0.5s 0.2s);
+      
+      h4 {
+        @extend .lf;
+        font-weight: 100;
+        font-size: 0.9em;
+        color: #FFF;
+        text-transform: uppercase;
+        margin-right: 1.5em;
+      }
+      
+      img {
+        @extend .lf;
+        width: 100px;
+      }
+    }
+  }
+  
+  span > header {
+    nav {
+      @include transition(all 0.5s 0.2s);
+      opacity: 1;
+      
+      .links {
+        float: none;
+      }
+      
+      .logo-wrapper {
+        display: none;
+      }
+      
+    }
+  }
+}
 
 header {
 	
@@ -14,13 +80,11 @@ header {
 		position: fixed;
 		height: 250px;
 		padding-bottom: 2em;
-		
-		@include transition(all 0.5s 0.2s);
-		
+    
 		.content {
 //			@extend .clearfix, .row;
 			width: 100%;
-			margin-top: 6em;
+			margin-top: 2em;
 		}
 		
 		.button {

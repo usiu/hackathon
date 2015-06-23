@@ -1,8 +1,14 @@
 import React from "react";
 import Router from "react-router"
 var { Link } = Router;
+import $ from "jquery";
 
 class SignedOutNavigation extends React.Component{
+  handleClick(event) {
+    event.preventDefault();
+    $('body').addClass('show-register');
+    $('html').addClass('no-scroll');
+  }
 	render() {
 		return <nav>
 			<div className="logo-wrapper lf">
@@ -13,7 +19,7 @@ class SignedOutNavigation extends React.Component{
 				<Link to="sponsors">Sponsors</Link>
 				<Link to="schedule">Schedule</Link>
 				<Link to="faq">FAQ</Link>
-				<Link to="home-signedOut">Register</Link>
+				<a href="" onClick={this.handleClick}>Register</a>
 			</div>
 		</nav>;
 	}

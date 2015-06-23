@@ -11,9 +11,14 @@ textarea {
 }
 
 html {
-    font-size: 1em;
-    line-height: 1.4;
-	font-family: $primary_font_stack;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: $primary_font_stack;
+	
+  &.no-scroll {
+		overflow: hidden;
+	}
+  
 }
 
 body {

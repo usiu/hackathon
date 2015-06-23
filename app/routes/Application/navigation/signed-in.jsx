@@ -26,7 +26,7 @@ class SignedInNavigation extends React.Component {
 				<Link to="sponsors-signedOut">Sponsors</Link>
 				<Link to="schedule-signedOut">Schedule</Link>
 				<Link to="faq-signedOut">FAQ</Link>
-				<Link to="home-signedOut">Register</Link>
+				<Link to="home-signedOut">Members</Link>
 				<ul className="rf">
 					<li>
 						<Link to="profile" className="account">
