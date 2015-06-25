@@ -9,11 +9,14 @@ class FAQ extends React.Component {
 		return <div className="page main wrapper">
           <div className="title-wrapper">
             <h1>FAQ</h1>
+            <p>Stuff you might need to know</p>
           </div>
             <article className="guide row">
               <h4 id="whatisa_hackathon_">What is a <em>hackathon</em>?</h4>
 
-            <p>A hackathon is an event, typically lasting several days, in which a large number of people meet to engage in <em>collaborative</em> computer programming.</p>
+            <p>A hackathon, also known as a codefest or codebrawl, is a social coding event that brings computer programmers and other interested people together to engage in collaborative computer programming or hacking.</p>
+            
+            <p>In the context of a hackathon, the word "hacking" is used to describe how multiple technologies can be used together in a new and innovative way. Teams of up to four people spend the weekend working on innovative software and hardware solutions to real-world problems. These projects range in platform and application, including elements of web development, mobile applications, low-level hardware [Arduinos, RaspberryPis etc] and more.</p>
 
             <h4>How much is this going to cost me?</h4>
             <p>The hackathon is completely free, including food, drinks and awesome swag.</p>
@@ -23,10 +26,9 @@ class FAQ extends React.Component {
             <ul>
             <li>A <strong>shirt</strong> :)</li>
             <li>Snacks and Drinks throughout the event.</li>
-            <li>You get to meet other developers and techies.</li>
-            <li>Be part of building a new community.</li>
+            <li>You get to meet other developers and techies from accross Nairobi.</li>
             <li>Swag from our <strong>awesome Sponsors</strong>.</li>
-            <li>And lots of other perks/ gifts :D</li>
+            <li>And lots of other perks/gifts :D</li>
             </ul>
 
             <h4 id="doihavetopreorganizeateam">Do I have to pre-organize a team?</h4>

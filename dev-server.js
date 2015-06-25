@@ -15,7 +15,7 @@ app.use("/assets", express.static(path.join(__dirname, 'dist/assets')));
 
 app.get("/*", function(req, res) {
 	res.render('index', {
-		title: 'Hackathon Summer 2015',
+		title: 'USIU-Africa Hackathon Summer 2015',
 		STYLES_URL: '/assets/stylesheets/app.css',
 		APP_SCRIPT_URL: '/assets/javascripts/app.js',
 		SHARED_SCRIPT_URL: '/assets/javascripts/shared.js'

@@ -72,7 +72,8 @@ var webpackConfig = function(env) {
             new webpack.optimize.UglifyJsPlugin(),
 			new webpack.NoErrorsPlugin(),
             new webpack.PrefetchPlugin("react"),
-            new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment")
+            new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment"),
+            new webpack.DefinePlugin({GA_TRACKING_CODE: JSON.stringify('XXXXXXXX')})
 
         );
     }

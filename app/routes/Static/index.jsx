@@ -4,6 +4,11 @@ var { Link } = Router;
 import $ from "jquery";
 
 class Home extends React.Component {
+  handleRegisterClick(event) {
+    event.preventDefault();
+    $('body').addClass('show-register');
+    $('html').addClass('no-scroll');
+  }
 	render() {
 	
 		return <div className="home main wrapper row">
@@ -11,7 +16,7 @@ class Home extends React.Component {
 				<h2>The USIU-Africa IT Club Presents</h2>
 				<h1>Hackathon Summer 2015</h1>
 				<h3>Saturday, 18 July</h3>
-				<a href="" className="button square green">Register</a>
+        <a href="" className="button square green" onClick={this.handleRegisterClick}>Register</a>
 			</div>
 			<div className="see-last-sem">
 				<img src="/assets/images/winner.jpg" />

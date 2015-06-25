@@ -20,8 +20,8 @@ class AppHeader extends React.Component {
             </nav>
             <div className="content">
               <div className="lf">
-                <a href="" className="button hollow white">Signup with Github</a>
-                <a href="" className="button hollow white">Signup with Google</a>
+                <a href="" className="button hollow white">Signin with Github</a>
+                <a href="" className="button hollow white">Signin with Google</a>
               </div>
               <div className="rf">
                 <a href="" className="button hollow white">Login</a>
@@ -30,6 +30,8 @@ class AppHeader extends React.Component {
           </header>
           <div className="sponsors">
             <h4>Sponsored by</h4>
+            <img src="/assets/images/at_logo_white.png" />
+            <img src="/assets/images/angani_white.png" />
             <img src="/assets/images/DO_Logo_Vertical_White.png" />
           </div>
         </div>

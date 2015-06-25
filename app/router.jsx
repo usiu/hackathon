@@ -33,28 +33,28 @@ export default (
   
   <Route handler={Application}>
 	
-	<Route name="login" path="/login" handler={Login} />
-	<Route name="signup" path="/signup" handler={Signup} />
+    <Route name="login" path="/login" handler={Login} />
+    <Route name="signup" path="/signup" handler={Signup} />
 
-	<Route handler={LoggedOut} path="/" name="signed-out">
-		<DefaultRoute name="home-signedOut" handler={Home} />
-		<Route name="about" path="/about" handler={About} />
-		<Route name="sponsors" path="/sponsors" handler={Sponsors} />
-		<Route name="schedule" path="/schedule" handler={Schedule} />
-		<Route name="faq" path="/faq" handler={FAQ} />
-		<Route name="history" path="/last-semester" handler={LastSemester} />
+    <Route handler={LoggedOut} path="/" name="signed-out">
+      <DefaultRoute name="home-signedOut" handler={Home} />
+      <Route name="about" path="/about" handler={About} />
+      <Route name="sponsors" path="/sponsors" handler={Sponsors} />
+      <Route name="schedule" path="/schedule" handler={Schedule} />
+      <Route name="faq" path="/faq" handler={FAQ} />
+      <Route name="history" path="/last-semester" handler={LastSemester} />
 
-	</Route>
-	
-  	<Route handler={LoggedIn} path="/" name="app">
-		<DefaultRoute name="home-signedIn" handler={Home} />
+    </Route>
 
-		<Route name="profile" path="profile" handler={Profile}>
-			<Route name="profile-settings" path="settings" handler={ProfileSettings} />
-			<DefaultRoute handler={ProfileHome} />
-		</Route>
-		
-		<NotFoundRoute handler={NotFound}/>
-	</Route>
+    <Route handler={LoggedIn} path="/" name="app">
+      <DefaultRoute name="home-signedIn" handler={Home} />
+
+      <Route name="profile" path="profile" handler={Profile}>
+        <Route name="profile-settings" path="settings" handler={ProfileSettings} />
+        <DefaultRoute handler={ProfileHome} />
+      </Route>
+
+      <NotFoundRoute handler={NotFound}/>
+    </Route>
   </Route>
 );
