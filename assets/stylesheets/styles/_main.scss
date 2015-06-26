@@ -146,7 +146,7 @@
 		
     //Guide Styles
     .guide, .terms, .privacy {
-      max-width: 720px;
+      max-width: 800px;
       
       h4 {
         font-size: 1.75em;
@@ -177,17 +177,19 @@
       }
       
       p {
-        font-size: 1em;
-        font-weight: normal;
+        color: #555;
+        font-weight: 100;
       }
 
       ul {
+        color: #555;
 
         li {
           display: list-item;
 
-          font-size: 0.9em;
-          line-height: 1.8;
+          font-size: 1.35em;
+          font-weight: 100;
+          line-height: 1.2;
           list-style: disc;
 
           margin-top: 0;
@@ -198,6 +200,10 @@
           padding-bottom: 0;
 
         }
+      }
+      
+      strong {
+        font-weight: normal;
       }
       
     }
