@@ -10,7 +10,6 @@ class Home extends React.Component {
     $('html').addClass('no-scroll');
   }
 	render() {
-	
 		return <div className="home main wrapper row">
 			<div className="cta">
 				<h2>The USIU-Africa IT Club Presents</h2>
