@@ -26,13 +26,13 @@ import Login from "./routes/Login";
 import Signup from "./routes/Signup";
 
 import Profile from "./routes/Profile";
-import ProfileHome from "./routes/Profile/home";
 import ProfileSettings from "./routes/Profile/settings";
+import Members from "./routes/Profile/members";
 
 export default (
-  
+
   <Route handler={Application}>
-	
+
     <Route name="login" path="/login" handler={Login} />
     <Route name="signup" path="/signup" handler={Signup} />
 
@@ -49,10 +49,14 @@ export default (
     <Route handler={LoggedIn} path="/" name="app">
       <DefaultRoute name="home-signedIn" handler={Home} />
 
-      <Route name="profile" path="profile" handler={Profile}>
+      <Route name="profile" path="/me" handler={Profile}>
         <Route name="profile-settings" path="settings" handler={ProfileSettings} />
-        <DefaultRoute handler={ProfileHome} />
+        <DefaultRoute handler={Profile} />
       </Route>
+
+			<Route name="members" path="/members" handler={Members}>
+				<Route name="member" path=":username"></Route>
+			</Route>
 
       <NotFoundRoute handler={NotFound}/>
     </Route>
