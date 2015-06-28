@@ -6,14 +6,14 @@ body {
     z-index: -1;
     visibility: hidden;
 		@include transition(all 0.5s 0.2s);
-    
+
     .sponsors {
       opacity: 0;
     }
-    
+
   }
-  
-  
+
+
 }
 
 body.show-register {
@@ -24,7 +24,7 @@ body.show-register {
     min-height: 550px;
     visibility: visible;
 		@include transition(all 0.5s 0.2s);
-    
+
     .sponsors {
       position: absolute;
       bottom: 2.5em;
@@ -32,7 +32,7 @@ body.show-register {
 
       @extend .wrapper;
       @include transition(all 0.5s 0.2s);
-      
+
       h4 {
         @extend .lf;
         font-weight: 100;
@@ -41,7 +41,7 @@ body.show-register {
         text-transform: uppercase;
         margin-right: 1.5em;
       }
-      
+
       img {
         @extend .lf;
 //        width: 100px;
@@ -50,75 +50,75 @@ body.show-register {
       }
     }
   }
-  
+
   span > header {
     nav {
       @include transition(all 0.5s 0.2s);
       opacity: 1;
-      
+
       .links {
         float: none;
       }
-      
+
       .logo-wrapper {
         display: none;
       }
-      
+
     }
   }
 }
 
 header {
-	
+
 	width: 95%;
 	height: 100px;
-	
+
 	margin: auto 2.5%;
 	padding: 1em 0;
 
 	a.menu-icon { display: none; }
-	
+
 	&.open {
 		position: fixed;
 		height: 250px;
 		padding-bottom: 2em;
-    
+
 		.content {
-//			@extend .clearfix, .row;
 			width: 100%;
 			margin-top: 2em;
 		}
-		
+
 		.button {
 			display: inline-block;
 			margin-right: 1em;
-			
+
 			&:last-of-type {
 				margin-right: 0;
 			}
 		}
 	}
-	
+
 	nav {
 		padding: 1em 0;
-		
+
 		.logo-wrapper {
 			img {
 				height: 32px;
 			}
 		}
-		
+
 		//Link styles
 		.links {
 			position: relative;
 			top: 0;
 			width: auto;
 			float: right;
-			
+
 			background: transparent;
-			
+
 			padding: 0;
-			
+
+      //Anchor styles
 			a {
 				position: relative;
 				display: inline-block;
@@ -130,7 +130,7 @@ header {
 				padding-top: 1em;
 				width: 100px;
 				margin-right: 2em;
-				
+
 				&:before {
 					content: ' ';
 					display: block;
@@ -143,7 +143,7 @@ header {
 					background: $summer_green;
 					@include transition(width 0.3s, height 0.5s, opacity 0.5s);
 				}
-				
+
 				&:after {
 					content: ' ';
 					display: block;
@@ -155,27 +155,28 @@ header {
 					background: $summer_dark_green;
 					@include transition(width 0.3s, opacity 0.5s);
 				}
-				
+
 				&:hover, &.active {
 					color: $summer_dark_green;
-					
+
 					&:after {
 						width: 100%;
 					}
 				}
-				
+
 				&.active {
 					font-weight: normal;
 				}
-				
+
 				&:last-of-type {
 					margin-right: 0;
 				}
 			}
-			
+
 		}
-		
-		//Menu Buttons		
+    //End of Link styles
+
+		//Menu Buttons
 		a.menu-icon {
 
 			position: absolute;
@@ -184,24 +185,14 @@ header {
 
 			@include transition(all 0.6s ease);
 
-//			&:hover {
-//				.patty {
-//					&:before {
-//						top: -9px;
-//					}		
-//					&:after {
-//						top: 9px;
-//					}
-//				}
-//			}
-
 		}
-		
+
+    //Hamburger Patty
 		.patty {
 			width: 24px;
 			height: 4px;
 			margin: 10px 0;
-			background: $usiu_blue;		
+			background: $usiu_blue;
 			cursor: pointer;
 			position: relative;
 
@@ -212,7 +203,7 @@ header {
 				display: block;
 				width: 24px;
 				height: 4px;
-				background: $usiu_blue;		
+				background: $usiu_blue;
 				z-index: -1;
 				@include transition(all 0.4s ease);
 				top: 0;
@@ -222,7 +213,7 @@ header {
 
 			&:before {
 				transform: rotate(-45deg);
-			}		
+			}
 			&:after {
 				transform: rotate(45deg);
 			}
@@ -231,7 +222,34 @@ header {
 				background: #FFF;
 			}
 		}
-		
+
+    //Dropdown styles
+    li {
+      ul {
+        display: none;
+      	padding-bottom: 0.5em;
+      	box-shadow: 1px 1px 1px 0px #CCC;
+      }
+
+      &:hover {
+      	ul {
+      		position: absolute;
+      		display: block;
+      		background: #FFF;
+      		padding-left: 2em;
+      		padding-right: 1em;
+
+      		li {
+      			display: block;
+      			line-height: 2em;
+      			font-size: 0.9em;
+      		}
+      	}
+      }
+	}
+  //End of Dropdown styles
+
+
 	}
 }
 
