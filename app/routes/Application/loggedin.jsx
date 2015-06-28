@@ -12,7 +12,7 @@ var requireAuth = (Component) => {
 		static willTransitionTo(transition) {
 			if (!Auth.isLoggedIn()) {
 				transition.redirect('/login', {}, {'nextPath' : transition.path});
-			}  
+			}
 		}
 		render() {
 		  return <Component {...this.props}/>
@@ -20,7 +20,7 @@ var requireAuth = (Component) => {
 	}
 };
 
-var SignedIn = requireAuth(class extends React.Component {
+var LoggedIn = requireAuth(class extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {}
@@ -35,4 +35,4 @@ var SignedIn = requireAuth(class extends React.Component {
 	}
 });
 
-export default SignedIn;
+export default LoggedIn;

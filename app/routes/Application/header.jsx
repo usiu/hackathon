@@ -23,7 +23,7 @@ class AppHeader extends React.Component {
                 <a href="" className="button hollow white">Signin with Github</a>
                 <a href="" className="button hollow white">Signin with Google</a>
               </div>
-              <div className="rf">
+              <div className="hidden rf">
                 <a href="" className="button hollow white">Login</a>
               </div>
             </div>

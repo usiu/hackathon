@@ -22,11 +22,11 @@ class SignedInNavigation extends React.Component {
 				<Link to="home-signedOut"><img src="/assets/images/logo.png" /></Link>
 			</div>
 			<div className="links rf">
-				<Link to="about-signedOut">About</Link>
-				<Link to="sponsors-signedOut">Sponsors</Link>
-				<Link to="schedule-signedOut">Schedule</Link>
-				<Link to="faq-signedOut">FAQ</Link>
-				<Link to="home-signedOut">Members</Link>
+				<Link to="about">About</Link>
+				<Link to="sponsors">Sponsors</Link>
+				<Link to="schedule">Schedule</Link>
+				<Link to="faq">FAQ</Link>
+				<Link to="members">Members</Link>
 				<ul className="rf">
 					<li>
 						<Link to="profile" className="account">
@@ -40,7 +40,7 @@ class SignedInNavigation extends React.Component {
 									return profile.get('name')
 								})
 							}</span>
-							<span className="caret"></span>				
+							<span className="caret"></span>
 						</Link>
 						<ul>
 							<li><Link to="profile-settings">Settings</Link></li>
