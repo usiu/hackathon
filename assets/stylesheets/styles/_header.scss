@@ -176,6 +176,35 @@ header {
 		}
     //End of Link styles
 
+    &.signed-in {
+      .links {
+        float: none;
+
+        > ul {
+          margin-right: 2em;
+
+          li {
+
+            a {
+              width: auto;
+              &::before {
+                background: orange;
+              }
+            }
+
+            li {
+              a {
+                &::before, &::after {
+                  background: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
 		//Menu Buttons
 		a.menu-icon {
 
@@ -186,8 +215,6 @@ header {
 			@include transition(all 0.6s ease);
 
 		}
-
-    //Hamburger Patty
 		.patty {
 			width: 24px;
 			height: 4px;
@@ -222,6 +249,7 @@ header {
 				background: #FFF;
 			}
 		}
+    //End of Menu button styles
 
     //Dropdown styles
     li {
@@ -248,6 +276,25 @@ header {
       }
 	}
   //End of Dropdown styles
+
+  .account {
+
+    img {
+      width: 28px;
+      height: 28px;
+      margin-right: 0.125em;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+    }
+
+    .caret {
+      margin-left: 0.25em;
+    }
+
+  }
 
 
 	}

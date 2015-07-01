@@ -17,17 +17,9 @@ class SignedInNavigation extends React.Component {
 		})
 	}
 	render() {
-		return <nav>
-			<div className="logo-wrapper lf">
-				<Link to="home-signedOut"><img src="/assets/images/logo.png" /></Link>
-			</div>
-			<div className="links rf">
-				<Link to="about">About</Link>
-				<Link to="sponsors">Sponsors</Link>
-				<Link to="schedule">Schedule</Link>
-				<Link to="faq">FAQ</Link>
-				<Link to="members">Members</Link>
-				<ul className="rf">
+		return <nav className="signed-in">
+			<div className="links row">
+				<ul className="lf">
 					<li>
 						<Link to="profile" className="account">
 							{
@@ -48,6 +40,14 @@ class SignedInNavigation extends React.Component {
 						</ul>
 					</li>
 				</ul>
+				<Link to="home-signedOut">Home</Link>
+				<Link to="members">Members</Link>
+				<div className="rf">
+					<Link to="about">About</Link>
+					<Link to="sponsors">Sponsors</Link>
+					<Link to="schedule">Schedule</Link>
+					<Link to="faq">FAQ</Link>
+				</div>
 			</div>
 		</nav>;
 	}

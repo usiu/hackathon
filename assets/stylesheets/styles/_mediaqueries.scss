@@ -9,22 +9,22 @@
 
 	.cell {
 		height: 475px;
-	}	
-	
+	}
+
 	.wrapper {
 		width: 95%;
 		margin: auto 2.5%;
 	}
-	
+
 	@import 'header';
-	
+
 	header {
 		display: block;
 	}
-	
+
 	.main {
 		margin-top: 2em;
-		
+
 		//Home page Styles
 		&.home {
 
@@ -72,43 +72,43 @@
 			}
 		}
 		//End of Home Styles
-		
+
 		//Page Styles
 		&.page {
-			
+
 			.title-wrapper {
 				width: 33.33333333333333%;
 			}
-			
+
 			.content {
 
 				p {
 					width: 70%;
 				}
 			}
-			
+
 			.main-image {
         float: left;
         width: 55%;
 				padding: 0.5em 0.5em 0;
         cursor: zoom-in;
 			}
-			
+
 			.gallery-images {
         float: left;
 				width: 45%;
 				padding: 0 0 0 1em;
-				
+
 				li {
 					width: 50%;
 					padding: 0.5em;
 				}
-        
+
         img {
           cursor: zoom-in;
         }
 			}
-			
+
 			//Sponsor Gallery Styles
 			.sponsor-gallery {
 				.gold {
@@ -134,7 +134,7 @@
 			}
 			//End of Sponsor Gallery Styles
 
-			
+
 			//Schedule Page Styles
 			&.schedule {
 
@@ -173,7 +173,7 @@
 
 						p {
 							font-size: 1em;
-							padding-right: 0;					
+							padding-right: 0;
 						}
 
 						dl {
@@ -272,7 +272,7 @@
 									float: left;
 									margin-right: 3.77358%;
 									width: 62.26415%;
-									margin-left: 18.86792%;						
+									margin-left: 18.86792%;
 								}
 
 							}
@@ -304,14 +304,12 @@
 				}
 			}
 			//End of Schedule Page Styles
-			
+
 		}
-		//End of Page Styles		
-		
-	
+		//End of Page Styles
+
 	}
-	
-	
+
 }
 
 @media print,
