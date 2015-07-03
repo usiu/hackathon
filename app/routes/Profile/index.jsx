@@ -12,6 +12,7 @@ const API_URL = API_CONFIG.url;
 var profile;
 
 import ProfileDetail from "./detail";
+import ProfileForm from "./form";
 
 class Profile extends BackboneMixin {
 	getBackboneCollections() {
@@ -23,7 +24,11 @@ class Profile extends BackboneMixin {
 		return <div className="wrapper row">
 				<Link to="members">&larr;Back to members</Link>
 					{profile.map(function(p) {
-						return <ProfileDetail model={p} key={p.id}/>;
+						if(p.get('university') === 'undefined' || p.get('hacking_what') === 'undefined' || p.get('gender') === 'undefined') {
+							return <ProfileForm model={p} key={p.id} />;
+						} else {
+							return <ProfileDetail model={p} key={p.id} />;
+						}
 					})}
 			</div>;
 	}

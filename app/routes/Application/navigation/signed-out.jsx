@@ -12,7 +12,7 @@ class SignedOutNavigation extends React.Component{
 	render() {
 		return <nav>
 			<div className="logo-wrapper lf">
-				<Link to="home-signedOut"><img src="/assets/images/logo.png" /></Link>
+				<Link to="/"><img src="/assets/images/logo.png" /></Link>
 			</div>
 			<div className="links rf">
 				<Link to="about">About</Link>

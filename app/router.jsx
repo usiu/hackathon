@@ -24,6 +24,7 @@ import NotFound from "./routes/NotFound";
 
 import Login from "./routes/Login";
 import Signup from "./routes/Signup";
+import Blank from "./routes/Static/blank";
 
 import Profile from "./routes/Profile";
 import ProfileSettings from "./routes/Profile/settings";
@@ -35,6 +36,7 @@ export default (
 
     <Route name="login" path="/login" handler={Login} />
     <Route name="signup" path="/signup" handler={Signup} />
+		<Route name="blank" path="/_blank" handler={Blank} />
 
     <Route handler={LoggedOut} path="/" name="signed-out">
       <DefaultRoute name="home-signedOut" handler={Home} />

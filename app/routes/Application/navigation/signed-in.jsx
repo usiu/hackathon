@@ -14,7 +14,7 @@ class SignedInNavigation extends React.Component {
 			} else {
 				//Todo: display error
 			}
-		})
+		});
 	}
 	render() {
 		return <nav className="signed-in">
@@ -40,7 +40,7 @@ class SignedInNavigation extends React.Component {
 						</ul>
 					</li>
 				</ul>
-				<Link to="home-signedOut">Home</Link>
+				<Link to="/">Home</Link>
 				<Link to="members">Members</Link>
 				<div className="rf">
 					<Link to="about">About</Link>

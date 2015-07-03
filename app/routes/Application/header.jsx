@@ -3,11 +3,53 @@ import Router from "react-router"
 var { Link } = Router;
 
 import Navigation from "./navigation";
+import API_CONFIG from "../../api-config";
+const API_URL = API_CONFIG.baseUrl;
 
 class AppHeader extends React.Component {
+	_handleAuth(url) {
+		var child = window.open(url, '_blank', 'menubar=no,status=no,height=400,width=800');
+		var leftDomain = false;
+	  var interval = setInterval(function() {
+        try {
+            if (child.document.domain === document.domain) {
+                if (leftDomain && child.document.readyState === "complete") {
+                    // we're here when the child window returned to our domain
+                    clearInterval(interval);
+										window.location = '/me';
+										child.close();
+                }
+            }
+            else {
+                // this code should never be reached,
+                // as the x-site security check throws
+                // but just in case
+                leftDomain = true;
+            }
+        }
+        catch(e) {
+            // we're here when the child window has been navigated away or closed
+            if (child.closed) {
+                clearInterval(interval);
+                alert("closed");
+                return;
+            }
+            // navigated to another domain
+            leftDomain = true;
+        }
+	    }, 500);
+	}
+	authGitHub(event) {
+		event.preventDefault();
+		this._handleAuth(API_URL + '/auth/github');
+	}
+	authGoogle(event) {
+		event.preventDefault();
+		this._handleAuth(API_URL + '/auth/google');
+	}
 	render() {
 		return <span>
-        
+
         <div className="bg-solid green row register">
           <header className="open">
             <nav>
@@ -20,8 +62,8 @@ class AppHeader extends React.Component {
             </nav>
             <div className="content">
               <div className="lf">
-                <a href="" className="button hollow white">Signin with Github</a>
-                <a href="" className="button hollow white">Signin with Google</a>
+                <a href="#" className="button hollow white" onClick={this.authGitHub.bind(this)}>Signin with Github</a>
+                <a href="#" className="button hollow white" onClick={this.authGoogle.bind(this)}>Signin with Google</a>
               </div>
               <div className="hidden rf">
                 <a href="" className="button hollow white">Login</a>
@@ -35,7 +77,7 @@ class AppHeader extends React.Component {
             <img src="/assets/images/DO_Logo_Vertical_White.png" />
           </div>
         </div>
-        
+
         <header>
 				  <Navigation />
 				  <a href="#" className="menu-icon"><div className="patty"></div></a>

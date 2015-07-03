@@ -11,7 +11,7 @@ var requireAuth = (Component) => {
 	return class Authenticated extends React.Component {
 		static willTransitionTo(transition) {
 			if (!Auth.isLoggedIn()) {
-				transition.redirect('/login', {}, {'nextPath' : transition.path});
+				transition.redirect('/', {}, {'nextPath' : transition.path});
 			}
 		}
 		render() {

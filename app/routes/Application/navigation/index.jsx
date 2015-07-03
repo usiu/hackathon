@@ -11,7 +11,6 @@ const API_URL = API_CONFIG.url;
 import Profiles from "./../../../collections/users";
 var profiles = Profiles.getInstance(API_URL + '/users/me');
 
-
 import SignedInNav from "./signed-in";
 import SignedOutNav from "./signed-out";
 
@@ -23,9 +22,9 @@ class AppNavigation extends BackboneMixin{
 		var Navigation;
 		if(Auth.isLoggedIn()) {
 			Navigation = SignedInNav;
-			
+
 			return <Navigation model={profiles} />;
-			
+
 		} else {
 			Navigation = SignedOutNav;
 			return (<Navigation />);
@@ -34,7 +33,7 @@ class AppNavigation extends BackboneMixin{
 	componentDidMount() {
 		super.componentDidMount();
 		profiles.fetch();
-	}		
+	}
 }
 
 export default AppNavigation;
