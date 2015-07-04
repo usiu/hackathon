@@ -13,9 +13,9 @@
 
 
 .bg-solid {
-	
+
 	&.dark-green {
-		background: $summer_dark_green;	
+		background: $summer_dark_green;
 	}
 	&.green {
 		background: $summer_green;
@@ -24,5 +24,73 @@
 		background: #000;
 	}
 }
+
+//Form Styles
+form {
+	margin-top: 3em;
+	
+	li {
+		position: relative;
+		margin-bottom: 1.5em;
+
+		&.inline {
+			display: inline-block;
+			width: auto;
+			margin-right: 2em;
+		}
+
+		li {
+			margin-bottom: 0;
+			display: inline-block;
+			vertical-align: top;
+			max-width: 350px;
+			margin-right: 2em;
+		}
+
+		&.short {
+			input, select, textarea {
+				width: 240px;
+			}
+		}
+
+		i {
+			color: darken(#DDD, 5%);
+			margin-left: -1.5em;
+		}
+	}
+
+	label {
+		display: block;
+		color: #666;
+
+		&.checkbox {
+			display: block;
+			position: absolute;
+			right: 0.25em;
+			top: 0;
+
+			input {
+				width: auto;
+				margin-right: 0.125em;
+			}
+
+		}
+
+		input {
+			width: auto;
+		}
+	}
+
+	input, select, textarea {
+		padding: 0.625em;
+		border: 1px solid #DDD;
+		width: 360px;
+		outline: none;
+	}
+	textarea {
+		min-height: 100px;
+	}
+}
+//End of form styles
 
 /** End of Common Site Styles **/

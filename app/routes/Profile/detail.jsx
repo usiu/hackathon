@@ -5,10 +5,8 @@ var { Link } = Router;
 class ProfileDetail extends React.Component {
 	render() {
 		return <div>
+			<img src="{this.props.model.get('profile_url')}" />
       <h1 className="">{this.props.model.get('name')}</h1>
-      <div className="links">
-        <a href=""></a>
-      </div>
       <p className="description"></p>
     </div>
 	};

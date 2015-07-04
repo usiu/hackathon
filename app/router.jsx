@@ -27,7 +27,7 @@ import Signup from "./routes/Signup";
 import Blank from "./routes/Static/blank";
 
 import Profile from "./routes/Profile";
-import ProfileSettings from "./routes/Profile/settings";
+import ProfileEdit from "./routes/Profile/edit";
 import Members from "./routes/Profile/members";
 
 export default (
@@ -40,23 +40,21 @@ export default (
 
     <Route handler={LoggedOut} path="/" name="signed-out">
       <DefaultRoute name="home-signedOut" handler={Home} />
-      <Route name="about" path="/about" handler={About} />
-      <Route name="sponsors" path="/sponsors" handler={Sponsors} />
-      <Route name="schedule" path="/schedule" handler={Schedule} />
-      <Route name="faq" path="/faq" handler={FAQ} />
-      <Route name="history" path="/last-semester" handler={LastSemester} />
+			<Route path="/about" handler={About} />
+      <Route path="/sponsors" handler={Sponsors} />
+      <Route path="/schedule" handler={Schedule} />
+      <Route path="/faq" handler={FAQ} />
+      <Route path="/last-semester" name="history" handler={LastSemester} />
 
     </Route>
 
     <Route handler={LoggedIn} path="/" name="app">
       <DefaultRoute name="home-signedIn" handler={Home} />
 
-      <Route name="profile" path="/me" handler={Profile}>
-        <Route name="profile-settings" path="settings" handler={ProfileSettings} />
-        <DefaultRoute handler={Profile} />
-      </Route>
+      <Route name="profile" path="/me" handler={Profile} />
+			<Route name="profile-edit" path="/me/edit" handler={ProfileEdit} />
 
-			<Route name="members" path="/members" handler={Members}>
+			<Route name="members" path="/attendees" handler={Members}>
 				<Route name="member" path=":username"></Route>
 			</Route>
 

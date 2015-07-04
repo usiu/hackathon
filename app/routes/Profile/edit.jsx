@@ -16,7 +16,7 @@ import ProfileForm from "./form";
 
 import store from "./../../actions/store";
 
-class Profile extends BackboneMixin {
+class ProfileEdit extends BackboneMixin {
 	constructor(props) {
 		super(props);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,19 +51,11 @@ class Profile extends BackboneMixin {
 		profile.fetch();
 		var self = this;
 		return <div className="main wrapper row">
-				<Link to="members">&larr;Back to members</Link>
 				{this.state.error && (
 					<p>{this.state.message}</p>
 				)}
 				{profile.map(function(p) {
-					if(p.get('university') === 'undefined' || p.get('hacking_what') === 'undefined' || p.get('gender') === 'undefined') {
 						return <ProfileForm onSubmit={self.handleSubmit.bind(self)} model={p} key={p.id} ref="form" />;
-					} else {
-						return <div>
-							<ProfileDetail model={p} key={p.id} />
-							<Link to="profile-edit" className="button hollow green">Edit Profile</Link>
-						</div>;
-					}
 				})}
 			</div>;
 	}
@@ -73,8 +65,8 @@ class Profile extends BackboneMixin {
 	}
 };
 
-Profile.contextTypes = {
+ProfileEdit.contextTypes = {
 	router: React.PropTypes.func
 };
 
-export default Profile;
+export default ProfileEdit;

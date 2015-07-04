@@ -98,6 +98,7 @@ header {
 		}
 	}
 
+  //Nav Styles
 	nav {
 		padding: 1em 0;
 
@@ -177,6 +178,27 @@ header {
     //End of Link styles
 
     &.signed-in {
+      padding: 0.25em 0;
+
+      a {
+        // font-size: 0.9em;
+        padding: 0;
+        margin-right: 3em;
+        width: auto;
+
+        &::before, &::after { background: none; }
+        &.active, &:hover {
+          color: $summer_green;
+        }
+        &.home {
+          width: 200px;
+          margin-right: 3em;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
       .links {
         float: none;
 
@@ -184,24 +206,15 @@ header {
           margin-right: 2em;
 
           li {
-
             a {
               width: auto;
-              &::before {
-                background: orange;
-              }
-            }
-
-            li {
-              a {
-                &::before, &::after {
-                  background: none;
-                }
-              }
             }
           }
+
         }
+
       }
+      //End of link styles
 
     }
 
@@ -298,6 +311,18 @@ header {
 
 
 	}
+  //End of Nav Sytles
 }
+
+//Signed In Styles
+.signed-in {
+  header {
+    // height: auto;
+    // border-bottom: 1px solid rgba($summer_green, 0.15);
+
+  }
+
+}
+//End of Signed In Styles
 
 /** End of Header Styles **/
