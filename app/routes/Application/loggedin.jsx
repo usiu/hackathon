@@ -26,7 +26,7 @@ var LoggedIn = requireAuth(class extends React.Component {
 		this.state = {}
 	}
 	render() {
-		return <div>
+		return <div className="signed-in">
 		<Header />
 		<div className="row">
 			<RouteHandler />

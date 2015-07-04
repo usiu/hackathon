@@ -15,10 +15,10 @@ class SignedOutNavigation extends React.Component{
 				<Link to="/"><img src="/assets/images/logo.png" /></Link>
 			</div>
 			<div className="links rf">
-				<Link to="about">About</Link>
-				<Link to="sponsors">Sponsors</Link>
-				<Link to="schedule">Schedule</Link>
-				<Link to="faq">FAQ</Link>
+				<Link to="/about">About</Link>
+				<Link to="/sponsors">Sponsors</Link>
+				<Link to="/schedule">Schedule</Link>
+				<Link to="/faq">FAQ</Link>
 				<a href="" onClick={this.handleClick}>Register</a>
 			</div>
 		</nav>;
