@@ -66,9 +66,6 @@ class LastSemester extends React.Component {
 							<img src="/assets/images/9T4A8266.jpg" onClick={this.handleClick} />
 						</li>
 						<li>
-							<img src="/assets/images/IMG_6043.jpg" onClick={this.handleClick} />
-						</li>
-						<li>
 							<img src="/assets/images/9T4A8282.jpg" onClick={this.handleClick} />
 						</li>
 						<li>
@@ -79,6 +76,9 @@ class LastSemester extends React.Component {
 						</li>
 						<li>
 							<img src="/assets/images/DSC07638.jpg" onClick={this.handleClick} />
+						</li>
+						<li>
+							<img src="/assets/images/IMG_6043.jpg" onClick={this.handleClick} />
 						</li>
 						<li>
 							<img src="/assets/images/IMG_6056.jpg" onClick={this.handleClick} />

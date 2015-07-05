@@ -11,7 +11,7 @@ var profiles = Profiles.getInstance();
 
 import ProfileDetail from "./detail";
 
-class RegisteredMembers extends BackboneMixin {
+class Attendees extends BackboneMixin {
 	getBackboneCollections() {
 		return [profiles];
 	}
@@ -32,4 +32,4 @@ class RegisteredMembers extends BackboneMixin {
 	}
 }
 
-export default RegisteredMembers;
+export default Attendees;

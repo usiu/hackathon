@@ -19,6 +19,8 @@ import Sponsors from "./routes/Static/sponsors";
 import Schedule from "./routes/Static/schedule";
 import FAQ from "./routes/Static/faq";
 import LastSemester from "./routes/Static/lastsemester"
+import Privacy from "./routes/Static/privacy";
+import Terms from "./routes/Static/terms";
 
 import NotFound from "./routes/NotFound";
 
@@ -28,7 +30,8 @@ import Blank from "./routes/Static/blank";
 
 import Profile from "./routes/Profile";
 import ProfileEdit from "./routes/Profile/edit";
-import Members from "./routes/Profile/members";
+import Attendees from "./routes/Profile/attendees";
+
 
 export default (
 
@@ -45,6 +48,8 @@ export default (
       <Route path="/schedule" handler={Schedule} />
       <Route path="/faq" handler={FAQ} />
       <Route path="/last-semester" name="history" handler={LastSemester} />
+			<Route path="/privacy" handler={Privacy} />
+			<Route path="/terms" handler={Terms} />
 
     </Route>
 
@@ -54,7 +59,7 @@ export default (
       <Route name="profile" path="/me" handler={Profile} />
 			<Route name="profile-edit" path="/me/edit" handler={ProfileEdit} />
 
-			<Route name="members" path="/attendees" handler={Members}>
+			<Route name="attendees" path="/attendees" handler={Attendees}>
 				<Route name="member" path=":username"></Route>
 			</Route>
 
