@@ -60,7 +60,7 @@ export default (
 			<Route name="profile-edit" path="/me/edit" handler={ProfileEdit} />
 
 			<Route name="attendees" path="/attendees" handler={Attendees}>
-				<Route name="member" path=":username"></Route>
+				<Route name="attendee" path=":username"></Route>
 			</Route>
 
       <NotFoundRoute handler={NotFound}/>
