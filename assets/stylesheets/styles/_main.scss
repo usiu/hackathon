@@ -4,30 +4,36 @@
 }
 
 .main {
-	
+
 	margin-top: 3em;
-	
+
 	img {
 		width: 100%;
+
+		&.avatar {
+			width: 20%;
+		  border-radius: 50%;
+			margin-top: 1em;
+			margin-right: 2em;
+		}
 	}
-	
-		
+
 	h1 {
 		font-size: 5em;
 		font-weight: 100;
 		color: $summer_dark_green;
 		letter-spacing: -2px;
-		margin: 0;	
+		margin: 0;
 	}
 
-	
+
 	//Main home styles
 	&.home {
-		
+
 		h1, h2, h3 {
 			margin: 0;
 		}
-		
+
 		h1 {
 			font-size: 3em;
 			font-weight: bold;
@@ -42,42 +48,42 @@
 			text-transform: uppercase;
 		}
 
-		
+
 		h2 {
 			margin-top: 0.25em;
 		}
-		
+
 		h3 {
 			margin-top: 0.125em;
 			font-weight: 100;
 			color: $summer_dark_green;
 		}
-		
+
 		.see-last-sem {
-			
+
 			@extend .lf;
 			@extend .cell;
 			@extend .bg-solid;
 			@extend .dark-green;
-			
+
 			.button {
 				margin-top: 2.75em;
 				margin-right: auto;
 				margin-left: auto;
 			}
-			
+
 		}
-		
+
 	}
 	//End of Home Styles
-	
+
 	//Page Styles
 	&.page {
-		
+
 		.row {
 			clear: both;
 		}
-		
+
 		p {
 			font-size: 1.35em;
 			font-weight: 100;
@@ -96,40 +102,40 @@
 				margin-top: 0.125em;
 			}
 		}
-		
+
 		h3 {
 			color: $summer_dark_green;
 			font-size: 1.25em;
 			font-weight: 100;
 		}
-		
+
 		.gallery-images {
-			
+
 			padding: 0.5em 0 2em;
-			
+
 			li {
 				@extend .lf;
-				padding: 0.5em 0;				
+				padding: 0.5em 0;
 			}
 		}
-		
-		//Sponsor Gallery Styles 
+
+		//Sponsor Gallery Styles
 		.sponsor-gallery {
-			
+
 			ul, li {
 				margin: 0;
 				padding: 0;
 			}
-			
-			ul {				
+
+			ul {
 				@extend .col-2-3;
 				@extend .clearfix;
 				display: block;
 			}
-			
+
 			li {
 				margin: 1em 3em 1em 0;
-        
+
 				a {
 					text-decoration: none;
 					display: table;
@@ -140,14 +146,14 @@
           height: 3em;
 				}
 			}
-			
-		}		
-		//End of Sponsor Gallery Styles 
-		
+
+		}
+		//End of Sponsor Gallery Styles
+
     //Guide Styles
     .guide, .terms, .privacy {
       max-width: 800px;
-      
+
       h4 {
         font-size: 1.75em;
         font-weight: 400;
@@ -165,7 +171,7 @@
         margin-top: 2.5em;
         margin-bottom: 0.75em;
       }
-      
+
       a {
         text-decoration: none;
         color: $summer_dark_green;
@@ -175,7 +181,7 @@
           border-bottom-color: $usiu_yellow;
         }
       }
-      
+
       p {
         color: #555;
         font-weight: 100;
@@ -201,13 +207,13 @@
 
         }
       }
-      
+
       strong {
         font-weight: normal;
       }
-      
+
     }
     //End of Guide Styles
 	}
-	
+
 }

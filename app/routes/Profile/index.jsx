@@ -51,7 +51,7 @@ class Profile extends BackboneMixin {
 		profile.fetch();
 		var self = this;
 		return <div className="main wrapper row">
-				<Link to="members">&larr;Back to members</Link>
+				<Link to="attendees">&larr;Back to list of attendees</Link>
 				{this.state.error && (
 					<p>{this.state.message}</p>
 				)}
