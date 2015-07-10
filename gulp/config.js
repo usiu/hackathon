@@ -23,7 +23,7 @@ var webpackConfig = function(env) {
             filename: env === 'production' ? '[name]-[hash].js' : '[name].js',
             publicPath: publicPath
         },
-		
+
 		noParse: [],
 
         plugins: [],
@@ -95,13 +95,13 @@ module.exports = {
 			url: 'http://127.0.0.1:8000/api/v1',
 		},
 		production: {
-			baseUrl: 'http://127.0.0.1:8000',
-			url: 'http://127.0.0.1:8000/api/v1',
+			baseUrl: 'http://usiuhackathon.me:8001',
+			url: 'http://usiuhackathon.me:8001/api/v1',
 		}
 	},
     webpack: webpackConfig,
     html: {
-        src: sourceDirectory + '/views/layouts/main.handlebars',
+        src: '/views/layouts/main.handlebars',
         dest: distDirectory
     },
     images: {

@@ -5,7 +5,7 @@ import $ from "jquery";
 
 class FAQ extends React.Component {
 	render() {
-
+    
 		return <div className="page main wrapper">
           <div className="title-wrapper">
             <h1>Terms and Conditions</h1>

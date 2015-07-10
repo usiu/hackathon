@@ -11,7 +11,7 @@ gulp.task('generate-html', function(cb) {
     var manifest = require(path.join(__dirname, '../../', config.dest, '/rev-manifest.json'));
 
     var templateData = {
-        title: 'Hackathon Summer 2015',
+        title: 'USIU-Africa Hackathon Summer 2015',
         STYLES_URL: '/assets/stylesheets/app.css',
         APP_SCRIPT_URL: '/assets/' + manifest.app,
         SHARED_SCRIPT_URL: '/assets/' + manifest.shared
