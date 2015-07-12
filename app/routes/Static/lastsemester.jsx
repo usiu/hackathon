@@ -84,6 +84,7 @@ class LastSemester extends React.Component {
 							<img src="/assets/images/IMG_6056.jpg" onClick={this.handleClick} />
 						</li>
 					</ul>
+					<a href="http://spring2015.usiuhackathon.me" className="button hollow green lf">View last semseter&rsquo;s site</a>
 				</div>
 			</div>;
 	}
