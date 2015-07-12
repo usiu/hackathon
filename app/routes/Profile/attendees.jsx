@@ -18,10 +18,10 @@ class Attendees extends BackboneMixin {
 	render() {
 		return (
 			<div className="main wrapper row">
-				<ul>
-					<li>{profiles.map(function(profile) {
-						return <ProfileDetail model={profile} key={profile.id}/>;
-					})}</li>
+				<ul className="attendees">
+					{profiles.map(function(profile) {
+						return <li className="col-1-5"><ProfileDetail model={profile} key={profile.id}/></li>;
+					})}
 				</ul>
 			</div>
 		);

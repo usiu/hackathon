@@ -76,6 +76,20 @@
 
 	}
 	//End of Home Styles
+  
+  //Attendees Styles
+  .attendees {
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    img.avatar {
+      margin: -0.25em 1em 0 0;
+    }
+  }
+  //End of Attendees Styles
+    
+
 
 	//Page Styles
 	&.page {
@@ -143,7 +157,7 @@
 				img {
 					vertical-align: top;
 					width: auto;
-          height: 3em;
+          height: 4em;
 				}
 			}
 
@@ -214,6 +228,7 @@
 
     }
     //End of Guide Styles
+    
 	}
 
 }

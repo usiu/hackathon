@@ -76,7 +76,7 @@ header {
 	margin: auto 2.5%;
 	padding: 1em 0;
 
-	a.menu-icon { display: none; }
+  a.menu-icon { display: none; }
 
 	&.open {
 		position: fixed;
@@ -96,6 +96,37 @@ header {
 				margin-right: 0;
 			}
 		}
+
+    a.menu-icon {
+      display: block;
+      top: 2em;
+      
+      &:hover  {
+  			.patty {
+  				&:before, &:after {
+  					top: 0;
+  				}
+  			}
+
+  		}
+		}
+
+		.patty {
+			background: none;
+
+			&:before {
+				transform: rotate(-45deg);
+			}
+			&:after {
+				transform: rotate(45deg);
+			}
+			&:before, &:after {
+				top: 0;
+				background: #FFF;
+			}
+
+		}
+
 	}
 
   //Nav Styles
