@@ -25,6 +25,7 @@ class AppFooter extends React.Component {
 				<h3>{['Designed ', <span>&amp;</span>, ' Developed', <br />, '(with <3 and lots of Tea', <span>&amp;</span>, 'Coffee)']}</h3>
         <a href="http://twitter.com/IanJuma" title="Ian Juma">@IanJuma</a>
         <a href="http://twitter.com/pbombo">@pbombo</a>
+        <a href="http://twitter.com/TechMusau">@TechMusau ("the one more email" guy)</a>
 		  </div>
 
 	  </footer>

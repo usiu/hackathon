@@ -25,7 +25,7 @@ export default {
 
     logout: function(callback) {
       request
-        .get(API_CONFIG.baseUrl + '/logout')
+        .get(API_CONFIG.baseUrl + '/api/logout')
         .set('Content-Type', 'application/json')
         .withCredentials()
         .end(function(err, res) {
@@ -40,7 +40,7 @@ export default {
     isLoggedIn: function(callback) {
       var loggedIn;
       $.ajax({
-        url: API_CONFIG.baseUrl + '/auth-status',
+        url: API_CONFIG.baseUrl + '/api/auth-status',
         crossDomain: true,
         xhrFields: { withCredentials: true },
         cache: false,

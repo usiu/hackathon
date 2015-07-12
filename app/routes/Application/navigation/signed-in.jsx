@@ -42,7 +42,7 @@ class SignedInNavigation extends React.Component {
 								<span className="caret"></span>
 							</Link>
 							<ul>
-								<li><Link to="profile-edit">Edit Profile</Link></li>
+								<li><Link to="profile-edit">Profile</Link></li>
 								<li><a href="/logout" onClick={this.logout.bind(this)}>Logout</a></li>
 							</ul>
 						</li>

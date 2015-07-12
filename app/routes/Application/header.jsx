@@ -41,23 +41,28 @@ class AppHeader extends React.Component {
 	}
 	authGitHub(event) {
 		event.preventDefault();
-		this._handleAuth(API_URL + '/auth/github');
+    this._handleAuth(API_URL + '/api/auth/github');
 	}
 	authGoogle(event) {
 		event.preventDefault();
-		this._handleAuth(API_URL + '/auth/google');
+    this._handleAuth(API_URL + '/api/auth/google');
+	}
+	closeRegister(event) {
+		event.preventDefault();
+    $('body').removeClass('show-register');
+    $('html').removeClass('no-scroll');
 	}
 	render() {
 		return <span>
 
         <div className="bg-solid green row register">
           <header className="open">
-            <nav>
+            	<nav>
               <div className="logo-wrapper lf">
               <a href=""><img src="/assets/images/logo_white.png" /></a>
               </div>
               <div className="rf">
-                <a href="#" className="menu-icon"><div className="patty"></div></a>
+                <a href="#" className="menu-icon" onClick={this.closeRegister.bind(this)}><div className="patty"></div></a>
               </div>
             </nav>
             <div className="content">
