@@ -17,6 +17,7 @@ import Home from "./routes/Static";
 import About from "./routes/Static/about";
 import Sponsors from "./routes/Static/sponsors";
 import Schedule from "./routes/Static/schedule";
+import Organisers from "./routes/Static/organisers";
 import FAQ from "./routes/Static/faq";
 import LastSemester from "./routes/Static/lastsemester"
 import Privacy from "./routes/Static/privacy";
@@ -46,6 +47,7 @@ export default (
 			<Route path="/about" handler={About} />
       <Route path="/sponsors" handler={Sponsors} />
       <Route path="/schedule" handler={Schedule} />
+			<Route path="/organisers" handler={Organisers} />
       <Route path="/faq" handler={FAQ} />
       <Route path="/last-semester" name="history" handler={LastSemester} />
 			<Route path="/privacy" handler={Privacy} />
