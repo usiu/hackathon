@@ -9,7 +9,6 @@ class FAQ extends React.Component {
 		return <div className="page main wrapper">
 				<div className="title-wrapper">
 					<h1>About</h1>
-					<p>Last semester&rsquo;s hackathon in pictures</p>
 				</div>
         <div className="guide row">
           <p>The USIU-Africa Hackathon is the university’s once a semester student organised hackathon.</p>

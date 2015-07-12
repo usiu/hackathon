@@ -10,7 +10,7 @@ class FAQ extends React.Component {
           <div className="title-wrapper">
             <h1>Terms and Conditions</h1>
           </div>
-					<article class="guide row">
+					<article className="guide row">
 						Last updated: July 04, 2015
 
 						<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://www.usiuhackathon.me website (the "Service") operated by USIU-Africa Hackathon Committee ("us", "we", or "our").</p>
@@ -46,7 +46,6 @@ class FAQ extends React.Component {
 	}
 	componentDidMount() {
 		$('title').html('USIU-Africa Hackathon &mdash; Summer 2015');
-		$('body').removeClass('login');
 	}
 };
 
