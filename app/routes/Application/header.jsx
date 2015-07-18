@@ -8,7 +8,7 @@ const API_URL = API_CONFIG.baseUrl;
 
 class AppHeader extends React.Component {
 	_handleAuth(url) {
-		var child = window.open(url, '_blank', 'menubar=no,status=no,height=400,width=800');
+		var child = window.open(url, '_blank', 'menubar=no,status=no,height=500,width=800');
 		var leftDomain = false;
 	  var interval = setInterval(function() {
         try {
@@ -37,7 +37,7 @@ class AppHeader extends React.Component {
             // navigated to another domain
             leftDomain = true;
         }
-	    }, 500);
+	    }, 600);
 	}
 	authGitHub(event) {
 		event.preventDefault();

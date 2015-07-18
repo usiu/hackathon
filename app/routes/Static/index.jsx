@@ -14,7 +14,7 @@ class Home extends React.Component {
 			<div className="cta">
 				<h2>The USIU-Africa IT Club Presents</h2>
 				<h1>Hackathon Summer 2015</h1>
-				<h3>Saturday, 18 July</h3>
+				<h3>Saturday, 1 August</h3>
         <a href="" className="button square green" onClick={this.handleRegisterClick}>Register</a>
 			</div>
 			<div className="see-last-sem">

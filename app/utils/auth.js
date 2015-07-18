@@ -56,6 +56,22 @@ export default {
       return loggedIn;
     },
 
+    _login: function(callback, self) {
+      request
+        .post(API_CONFIG.baseUrl + '/api/auth-status')
+        .set('Content-Type', 'application/json')
+        .withCredentials()
+        .end(function(err, res) {
+          var loggedIn;
+          if (res.message === 'Authorized') {
+            callback(true, res, self);
+          } else {
+            callback(false, res, self);
+          }
+          return loggedIn;
+        });
+    },
+
     getProfile: function() {
       request
         .get(API_CONFIG.baseUrl + '/api/v1/users/me')
